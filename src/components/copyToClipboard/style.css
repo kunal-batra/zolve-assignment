@@ -1,0 +1,36 @@
+.copy-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    height: 36px;
+}
+
+.input-container input, .paste-container input{
+    flex: 1;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.input-container button{
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.paste-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    height: 36px;
+    margin-top: 50px;
+}

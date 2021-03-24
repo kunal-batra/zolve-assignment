@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Header from "./components/header/header";
+import BarChart from "./components/barChart/barChart"
+import CopyToClipboard from "./components/copyToClipboard/clipboard"
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<BrowserRouter>
+			<div className="app">
+				<Header />
+				<Switch>
+					<Route exact path="/">
+						<BarChart />
+					</Route>
+					<Route path="/copy-to-clipboard">
+						<CopyToClipboard />
+					</Route>
+				</Switch>
+			</div>
+		</BrowserRouter>
+	);
 }
 
 export default App;
